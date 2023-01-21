@@ -1,4 +1,37 @@
 ---
+import ListItem from "../components/ListItem.astro";
+import WhatsAppIcon from "../components/icons/WhatsApp.astro";
+import MapIcon from "../components/icons/Map.astro";
+import PhoneIcon from "../components/icons/Phone.astro";
 ---
 
-<div><p>Home page</p></div>
+<head>
+	<meta name="viewport" content="width=device-width" />
+</head>
+<main class="max-w-sm mx-auto">
+	<section class="relative">
+		<div class="absolute flex items-end pb-16 justify-center h-full w-full">
+			<h1
+				class="z-10 font-bold text-6xl top-16 left-4 text-white [text-shadow:rgb(0_0_0_/_25%)_0px_3px_8px]"
+			>
+				Sayer
+			</h1>
+		</div>
+		<figure>
+			<img
+				class="brightness-[.3] rounded-b-3xl"
+				src="/img/hero.avif"
+				alt="green leafed plant"
+			/>
+		</figure>
+	</section>
+	<ul class="mt-16 space-y-4">
+		<ListItem href="https://wa.me/+525565498376">
+			<WhatsAppIcon />WhatsApp
+		</ListItem>
+		<ListItem href="tel:+525565498376"><PhoneIcon />Telefono</ListItem>
+		<ListItem href="https://goo.gl/maps/cRNUV6xDV1gwhN9o8">
+			<MapIcon />Dónde Estamos
+		</ListItem>
+	</ul>
+</main>
