@@ -4,6 +4,7 @@ import WhatsAppIcon from "../components/icons/WhatsApp.astro";
 import MapIcon from "../components/icons/Map.astro";
 import PhoneIcon from "../components/icons/Phone.astro";
 import BankIcon from "../components/icons/Bank.astro";
+import PaymentItem from "../components/PaymentItem.astro";
 ---
 
 <head>
@@ -72,6 +73,13 @@ import BankIcon from "../components/icons/Bank.astro";
 			<BankIcon />
 			<span id="clabeText">Clabe Interbancaria</span>
 		</ListItem>
+	</ul>
+
+	<ul class="flex space-x-2 items-center justify-center">
+		<PaymentItem img="/img/visa.png" alt="visa logo" />
+		<PaymentItem img="/img/mastercard.png" alt="mastercard logo" />
+		<PaymentItem img="/img/mercadopago.png" alt="mercado pago logo" />
+		<PaymentItem img="/img/codi.png" alt="codi logo" />
 	</ul>
 </main>
 
