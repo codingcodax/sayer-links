@@ -1,12 +1,26 @@
 ---
-const { href } = Astro.props;
+const { href, id } = Astro.props;
 ---
 
 <li>
-  <a
-    href={href}
-    class="py-4 px-6 shadow-lg rounded-lg w-full inline-flex items-center transition-[box-shadow,_transform,_background,_color] duration-200 hover:text-white hover:bg-[#0093e5] ease-in-out hover:shadow-xl hover:-translate-y-1"
-  >
-    <slot />
-  </a>
+  {
+    !href && (
+      <button
+        class="py-4 px-6 shadow-lg rounded-lg w-full inline-flex items-center transition-[box-shadow,_transform,_background,_color] duration-200 hover:text-white hover:bg-[#0093e5] ease-in-out hover:shadow-xl hover:-translate-y-1"
+        id={id}
+      >
+        <slot />
+      </button>
+    )
+  }
+  {
+    href && (
+      <a
+        href={href}
+        class="py-4 px-6 shadow-lg rounded-lg w-full inline-flex items-center transition-[box-shadow,_transform,_background,_color] duration-200 hover:text-white hover:bg-[#0093e5] ease-in-out hover:shadow-xl hover:-translate-y-1"
+      >
+        <slot />
+      </a>
+    )
+  }
 </li>
